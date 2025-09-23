@@ -1,6 +1,6 @@
 'use server'
 
-import { LoginSchema } from "@/schemas"
+import { LoginSchema } from "@/domain/schemas"
 import { cookies } from "next/headers"
 import { redirect } from "next/navigation"
 

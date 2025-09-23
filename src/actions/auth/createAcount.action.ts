@@ -1,6 +1,6 @@
 'use server'
 
-import { RegisterSchema } from "@/schemas"
+import { RegisterSchema } from "@/domain/schemas"
 
 
 interface ActionState {
