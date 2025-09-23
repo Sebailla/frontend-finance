@@ -50,12 +50,12 @@ export const LoginUserAction = async (prevState: ActionState, formData: FormData
 
     // cookies Set
     (await cookies()).set({
-        name: 'BUDGET_TOKEN',
+        name: 'AUTH_TOKEN',
         value: json.token,
         httpOnly: true,
         path: '/',
     })
 
-    redirect('/admin')
+    redirect('/')
 
 }
