@@ -1,6 +1,5 @@
 
-import DarkLogo from "@/components/ui/logos/DarkLogo";
-import Notifications from "@/components/ui/Notifications";
+import Notifications from "@/components/ui/Notifications/Notifications";
 
 
 
@@ -12,15 +11,8 @@ export default function RootLayout({ children }: Readonly<{
             <div className="lg:grid lg:grid-cols-2 min-h-screen absolute top-0 left-0 leading-5 h-full w-full overflow-hidden">
 
                 {/* Left side of the auth layout */}
-                <section className="flex flex-col  items-center">
-                    <div className="">
-                        <DarkLogo />
-                    </div>
-                    <div className="hidden lg:flex flex-col justify-center items-center mx-40">
-                        <p className="text-4xl text-primary font-outfix font-semibold mb-10 text-pastel-yellow"></p>
-                        
-                    </div>
-
+                <section className="flex flex-col  items-center ">
+                    
                 </section>
 
                 {/* Right side of the auth layout */}

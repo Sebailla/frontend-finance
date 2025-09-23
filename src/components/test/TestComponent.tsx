@@ -1,3 +1,4 @@
+import Button from "../ui/buttons/Button"
 
 
 const TestComponent = () => {
@@ -15,7 +16,10 @@ const TestComponent = () => {
             
             <p className="text-body">Body(p) - Texto principal, Crea un public carpeta en la raíz de su proyecto para <strong>(strong) - almacenar activos estáticos </strong>como imágenes, fuentes, etc. A continuación, el código puede hacer referencia a los archivos que contiene a partir de la URL base.public/
             </p>
-            <button className="btn" type="submit">Button</button>
+            <Button
+            color="green"
+            name="Button"
+            />
             <span className="text-footnote">Nota al pie de pagina: <strong>Autor - </strong>Sebastian Illa</span>
         </div>
     )

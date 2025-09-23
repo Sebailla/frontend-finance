@@ -1,34 +1,42 @@
 @import "tailwindcss";
 
+/* ============================================================================
+   ROOT VARIABLES & THEME CONFIGURATION
+============================================================================ */
+
 :root {
+  /* Base Colors */
   --background: #ffffff;
   --foreground: #1d1d1f;
-  --shadow-color: oklch(0.3 0 0 / 0.25); /* sombra oscura neutra */
-
-  --background-nav: #f5f5f7
+  --background-nav: #f5f5f7;
+  --shadow-color: oklch(0.3 0 0 / 0.25);
 }
 
 @theme inline {
+  /* Base Theme Variables */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-background-nav: var(--background-nav);
   
+  /* Shadow Effects */
   --shadow-hover: 0 6px 8px var(--shadow-color);
   --shadow-active: 0 2px 4px var(--shadow-color);
-
+  
+  /* Layout */
   --container-padding: 1.5rem;
 
-/*! ------------------ COLORS ------------------------ */ 
-
+  /* ================== COLOR PALETTE ================== */
+  
+  /* Pastel Colors - Primary */
   --color-pastel-yellow: #f1f38d;
   --color-pastel-green: #8df3c2;
   --color-pastel-violet: #c695f4;
   --color-pastel-rose: #f38dbe;
   --color-pastel-orange: #f4c695;
-
+  
+  /* Pastel Colors - Extended */
   --color-pastel-lightblue-300: #63DFF8;
   --color-fluor-yellow-300: #DFF863;
-
   --color-pastel-rose-300: #ef6bab;
   --color-pastel-violet-300: #b06bef;
   --color-pastel-violet-400: #9942eb;
@@ -38,42 +46,31 @@
   --color-pastel-yellow-700: #919410;
   --color-teal-new-400: #58c1c2;
   --color-yellow-new-400: #f5c242;
-
   --color-green-apple: #c1ec76;
 
-/* 
-#ffae62
-#399ca1
-#fb4f14
+  /* Pastel Yellow Scale */
+  --color-pastel-yellow-50: #fcfde8;
+  --color-pastel-yellow-100: #f7f8be;
+  --color-pastel-yellow-200: #f1f38d;
+  --color-pastel-yellow-300: #edef6b;
+  --color-pastel-yellow-400: #e8eb42;
+  --color-pastel-yellow-500: #e3e718;
+  --color-pastel-yellow-600: #babd14;
+  --color-pastel-yellow-700: #919410;
+  --color-pastel-yellow-800: #696a0b;
+  --color-pastel-yellow-900: #404107;
+  --color-pastel-yellow-950: #171702;
 
-#c1ec76  verde manzana del button
-#ec6161   rojo pastel
-
-#f9f9f9
-#CA78E3
-#222222   negro texto
-
-Pateles:
-#c9facd
-#ffe7da
-#d0f2fe
-#fff8ce 
-
-#1d1d1f   text apple
-#6e6e73   text apple
-#f5f5f7   background Nav apple 
-
-*/
-
-
- /*! ------------------ FONTS ------------------------ */ 
+  /* ================== TYPOGRAPHY ================== */
+  
+  /* Font Families */
   --font-sfProDisplay: var(--font-sf-pro-display);
   --font-sfProText: var(--font-sf-pro-text);
 
- /*! iOS Small (Default) */
+  /* Typography Scale - iOS Small (Default) */
   --text-title-large: 32px;
   --leading-title-large: 39px;
-  --weight-title-large: 700; /* Bold */
+  --weight-title-large: 700;
 
   --text-title1: 26px;
   --leading-title1: 32px;
@@ -85,105 +82,124 @@ Pateles:
 
   --text-headline: 21px;
   --leading-headline: 23px;
-  --weight-headline: 600; /* Bold */
+  --weight-headline: 600;
 
   --text-body: 16px;
   --leading-body: 22px;
-  --weight-headline: 400; 
+  --weight-body: 400;
 
   --text-footnote: 12px;
   --leading-footnote: 13px;
-  --weight-headline: 400;
-
+  --weight-footnote: 400;
 }
 
-/*! iOS Large (tablet) */
+/* ============================================================================
+   RESPONSIVE BREAKPOINTS
+============================================================================ */
+
+/* iOS Large (Tablet) - 700px to 1024px */
 @media (min-width: 700px) and (max-width: 1024px) {
   :root {
-  --text-title-large: 34px;
-  --leading-title-large: 41px;
-  --weight-title-large: 700;
+    --text-title-large: 34px;
+    --leading-title-large: 41px;
+    --weight-title-large: 700;
 
-  --text-title1: 28px;
-  --leading-title1: 34px;
-  --weight-title1: 700;
+    --text-title1: 28px;
+    --leading-title1: 34px;
+    --weight-title1: 700;
 
-  --text-title2: 22px;
-  --leading-title2: 28px;
-  --weight-title3: 600;
+    --text-title2: 22px;
+    --leading-title2: 28px;
+    --weight-title2: 600;
 
-  --text-headline: 21px;
-  --leading-headline: 23px;
-  --weight-headline: 600;
+    --text-headline: 21px;
+    --leading-headline: 23px;
+    --weight-headline: 600;
 
-  --text-body: 17px;
-  --leading-body: 24px;
-  --weight-body: 400;
+    --text-body: 17px;
+    --leading-body: 24px;
+    --weight-body: 400;
 
-  --text-footnote: 13px;
-  --leading-footnote: 18px;
-  --weight-footnote: 400;
+    --text-footnote: 13px;
+    --leading-footnote: 18px;
+    --weight-footnote: 400;
 
-  --container-padding: 3rem;
+    --container-padding: 3rem;
   }
 }
 
-/*! macOS (≥1024px) */
+/* macOS Desktop (≥1024px) */
 @media (min-width: 1024px) {
   :root {
-  --text-title-large: 48px;
-  --leading-title-large: 52px;
-  --weight-title-large: 700;
+    --text-title-large: 48px;
+    --leading-title-large: 52px;
+    --weight-title-large: 700;
 
-  --text-title1: 32px;
-  --leading-title1: 36px;
-  --weight-title1: 700;
+    --text-title1: 32px;
+    --leading-title1: 36px;
+    --weight-title1: 700;
 
-  --text-title2: 28px;
-  --leading-title2: 32px;
-  --weight-title2: 600;
+    --text-title2: 28px;
+    --leading-title2: 32px;
+    --weight-title2: 600;
 
-  --text-headline: 21px;
-  --leading-headline: 23px;
-  --weight-headline: 400;
+    --text-headline: 21px;
+    --leading-headline: 23px;
+    --weight-headline: 400;
 
-  --text-body: 18px;
-  --leading-body: 26px;
-  --weight-body: 400;
+    --text-body: 18px;
+    --leading-body: 26px;
+    --weight-body: 400;
 
-  --text-footnote: 14px;
-  --leading-footnote: 20px;
-  --weight-footnote: 400;
+    --text-footnote: 14px;
+    --leading-footnote: 20px;
+    --weight-footnote: 400;
 
-  --container-padding: 0rem;
-  --container-max-width: 980px
+    --container-padding: 0rem;
+    --container-max-width: 980px;
   }
-/*! ------------------------------------------------- */ 
-
 }
 
-@layer utilities {
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --foreground: #f5f5f7;
+    --shadow-color: oklch(0.85 0 0 / 0.25);
+    --background-nav: #1d1d1f;
+  }
+}
 
+/* ============================================================================
+   UTILITY CLASSES
+============================================================================ */
+
+@layer utilities {
+  /* Typography Utilities */
   .text-title-large {
     font-size: var(--text-title-large);
     line-height: var(--leading-title-large);
     font-weight: var(--weight-title-large);
   }
+  
   .text-title {
     font-size: var(--text-title1);
     line-height: var(--leading-title1);
     font-weight: var(--weight-title1);
-  } 
+  }
+  
   .text-subTitle {
     font-size: var(--text-title2);
     line-height: var(--leading-title2);
     font-weight: var(--weight-title2);
   }
+  
   .text-headline {
     font-size: var(--text-headline);
     line-height: var(--leading-headline);
     font-weight: var(--weight-headline);
   }
+  
   .text-body {
     font-size: var(--text-body);
     line-height: var(--leading-body);
@@ -196,21 +212,14 @@ Pateles:
     font-weight: var(--weight-footnote);
   }
   
-  .text-strong{
-    font-weight: var(--weight-strong);
-  }
-
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #000000;
-    --foreground: #f5f5f7;
-    --shadow-color: oklch(0.85 0 0 / 0.25); 
-    --background-nav: #1d1d1f;
+  .text-strong {
+    font-weight: 700;
   }
 }
 
+/* ============================================================================
+   BASE STYLES
+============================================================================ */
 
 body {
   background: var(--background);
@@ -218,120 +227,131 @@ body {
   font-family: var(--font-sf-pro-display, --font-sf-pro-text);
 }
 
-strong{
-  font-weight: 700
+strong {
+  font-weight: 700;
 }
 
-/* =============================================================
-!                           Components
-============================================================== */
+/* ============================================================================
+   COMPONENT STYLES
+============================================================================ */
 
+/* Container */
+.container {
+  @apply p-[var(--container-padding)] 
+         font-sfProDisplay 
+         w-[var(--container-max-width)];
+}
 
-.container{
-    @apply p-[var(--container-padding)] 
-    font-sfProDisplay 
-    w-[var(--container-max-width)];
-  }
+/* Background Adapter */
+.bg-adapter {
+  @apply bg-cover bg-center bg-no-repeat;
+}
 
-.header{
+/* Header */
+.header {
   @apply sticky top-0 z-50
-  bg-background-nav 
-  px-4 
-  md:px-6 
-  [&_*]:no-underline 
-  h-15 
-  w-full;
+         bg-background-nav 
+         px-4 md:px-6 
+         [&_*]:no-underline 
+         h-15 
+         w-full;
 }
 
+/* Button Component */
 .btn {
-    @apply bg-[#c1ec76] px-3 md:px-6 py-1 rounded-xl text-body md:text-headline text-[#1d1d1f] font-sfProText font-semibold cursor-pointer
-    transform 
-    transition 
-    duration-150 
-    ease-in-out 
-
-    hover:shadow-[0_6px_8px_var(--shadow-color)]
-    hover:-translate-y-0.5
-    hover:ring-2 ring-offset-2 ring-offset-background ring-[#c1ec76]
-
-    active:shadow-[0_2px_4px_var(--shadow-color)]
-    active:translate-y-0.5
+  @apply px-3 md:px-6 py-2 md:py-3 
+         rounded-xl 
+         text-body md:text-headline 
+         text-[#1d1d1f] 
+         font-sfProDisplay 
+         font-semibold 
+         cursor-pointer
+         transform 
+         transition 
+         duration-150 
+         ease-in-out 
+         hover:shadow-[0_6px_8px_var(--shadow-color)]
+         hover:-translate-y-0.5
+         hover:ring-2 
+         ring-offset-2 
+         ring-offset-background
+         active:shadow-[0_2px_4px_var(--shadow-color)]
+         active:translate-y-0.5;
 }
 
+/* ============================================================================
+   UTILITY COMPONENTS
+============================================================================ */
 
-
-/*!       Underline utilities         */
-
+/* Underline Hover Effects */
 .u-underline-hover,
 .u-underline-hover-current {
-    @apply relative inline-block;
+  @apply relative inline-block;
 }
 
-/* base ::after para ambas variantes */
 .u-underline-hover::after,
 .u-underline-hover-current::after {
-    content: '';
-    @apply absolute left-0 -bottom-0.5 h-[2px] w-full origin-left transform scale-x-0
-    transition-transform duration-100 ease-out;
+  content: '';
+  @apply absolute left-0 -bottom-0.5 h-[2px] w-full 
+         origin-left transform scale-x-0
+         transition-transform duration-100 ease-out;
 }
 
-/* variante fija: usa el color de título (token) */
 .u-underline-hover::after {
-    background-color: var(--color-title-text);
+  background-color: var(--color-title-text);
 }
 
-/* variante "current": sigue el color del texto */
 .u-underline-hover-current::after {
-    @apply bg-current;
+  @apply bg-current;
 }
 
-/* activar en hover y cuando el elemento tiene foco visible (accesibilidad teclado) */
 .u-underline-hover:hover::after,
 .u-underline-hover:focus-visible::after,
 .u-underline-hover-current:hover::after,
 .u-underline-hover-current:focus-visible::after {
-    @apply scale-x-100;
+  @apply scale-x-100;
 }
 
-/* respeta reduce motion */
+/* Respect Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
-    .u-underline-hover::after,
-    .u-underline-hover-current::after {
+  .u-underline-hover::after,
+  .u-underline-hover-current::after {
     transition: none;
-    }
+  }
 }
 
+/* ============================================================================
+   ANIMATIONS & KEYFRAMES
+============================================================================ */
 
-/*!       Toast utilities         */
-
-/* Animación personalizada para los toasts */
+/* Toast Animations */
 @keyframes toast-enter {
-    from {
+  from {
     opacity: 0;
     transform: translateX(20px);
-    }
-    to {
+  }
+  to {
     opacity: 1;
     transform: translateX(0);
-    }
+  }
 }
 
 @keyframes toast-exit {
-    from {
+  from {
     opacity: 1;
     transform: translateX(0);
-    }
-    to {
+  }
+  to {
     opacity: 0;
     transform: translateX(20px);
-    }
+  }
 }
 
-/* Aplica a los contenedores de react-hot-toast */
+/* Toast Styles */
 [data-sonner-toast] {
-    animation: toast-enter 0.3s ease-out forwards;
+  animation: toast-enter 0.3s ease-out forwards;
 }
 
 [data-sonner-toast][data-state="removed"] {
-    animation: toast-exit 0.25s ease-in forwards;
+  animation: toast-exit 0.25s ease-in forwards;
 }
