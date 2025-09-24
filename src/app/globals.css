@@ -33,6 +33,7 @@
   --color-pastel-violet: #c695f4;
   --color-pastel-rose: #f38dbe;
   --color-pastel-orange: #f4c695;
+  --color-disabled: #676773;
   
   /* Pastel Colors - Extended */
   --color-pastel-lightblue-300: #63DFF8;
@@ -46,7 +47,16 @@
   --color-pastel-yellow-700: #919410;
   --color-teal-new-400: #58c1c2;
   --color-yellow-new-400: #f5c242;
-  --color-green-apple: #c1ec76;
+
+  --color-green-apple-100: #E3F6C0;
+  --color-green-apple-300: #c1ec76;
+  --color-green-apple-400: #ACE647;
+  --color-green-apple-700: #629014;
+
+  --color-pastel-lira-100: #E8C4F3;
+  --color-pastel-lira-300: #CA78E3; /* Color referente violet */
+  --color-pastel-lira-400: #BB51DB;
+  --color-pastel-lira-700: #6E1C87;
 
   /* Pastel Yellow Scale */
   --color-pastel-yellow-50: #fcfde8;
@@ -60,6 +70,53 @@
   --color-pastel-yellow-800: #696a0b;
   --color-pastel-yellow-900: #404107;
   --color-pastel-yellow-950: #171702;
+
+  /* -  Pastel violet 200 - */
+  --color-pastel-violet-50: #f3e8fd;
+  --color-pastel-violet-100: #dcbef8;
+  --color-pastel-violet-200: #c695f4;
+  --color-pastel-violet-300: #b06bef;
+  --color-pastel-violet-400: #9942eb;
+  --color-pastel-violet-500: #8318e7;
+  --color-pastel-violet-600: #6b14bd;
+  --color-pastel-violet-700: #541094;
+  --color-pastel-violet-800: #3c0b6a;
+  --color-pastel-violet-900: #250741;
+  --color-pastel-violet-950: #0d0217;
+
+  /* -  Pastel rose 200 - */
+  --color-pastel-rose-50: #fde8f2;
+  --color-pastel-rose-100: #f8beda;
+  --color-pastel-rose-200: #f38dbe;
+  --color-pastel-rose-300: #ef6bab;
+  --color-pastel-rose-400: #eb4294;
+  --color-pastel-rose-500: #e7187c;
+  --color-pastel-rose-600: #bd1466;
+  --color-pastel-rose-700: #94104f;
+  --color-pastel-rose-800: #6a0b39;
+  --color-pastel-rose-900: #410723;
+  --color-pastel-rose-950: #17020c;
+
+
+  /* 
+#ffae62
+#399ca1
+#fb4f14
+
+#c1ec76  verde manzana del button
+#ec6161    rojo pastel
+
+#f9f9f9
+#CA78E3
+#222222   negro texto
+
+Pateles:
+#c9facd
+#ffe7da
+#d0f2fe
+#fff8ce 
+
+*/
 
   /* ================== TYPOGRAPHY ================== */
   
@@ -256,6 +313,7 @@ strong {
          h-15 
          w-full;
 }
+
 
 /* Button Component */
 .btn {

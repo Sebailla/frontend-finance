@@ -5,6 +5,7 @@ export * from './pages/public/auth/ForgotPassword';
 export * from './pages/public/auth/Login';
 export * from './pages/public/auth/Register';
 export * from './pages/public/auth/forms/LoginForm';
+export * from './pages/public/auth/forms/RegisterForm';
 export * from './test/TestComponent';
 export * from './ui/Notifications/ErrorMsg';
 export * from './ui/Notifications/Notifications';

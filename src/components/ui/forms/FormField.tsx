@@ -31,7 +31,7 @@ export const FormField = ({
                         "focus:border-pastel-yellow-400": color === "yellow",
                         "focus:border-pastel-rose-100": color === "rose",
                         "focus:border-pastel-lira-100": color === "lira",
-                        "focus:border-pastel-green-100": color === "green",
+                        "focus:border-green-apple-300": color === "green",
                         "focus:border-pastel-sky-100": color === "sky",
                         "focus:border-pastel-red-100": color === "red",
                     },
@@ -53,7 +53,7 @@ export const FormField = ({
                             color === "rose",
                         "peer-focus:text-pastel-lira-700 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:!border-pastel-lira-100 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:!border-pastel-lira-100":
                             color === "lira",
-                        "peer-focus:text-pastel-green-700 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:!border-pastel-green-100 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:!border-pastel-green-100":
+                        "peer-focus:text-green-apple-700 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:!border-green-apple-300 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:!border-green-apple-300":
                             color === "green",
                         "peer-focus:text-pastel-sky-700 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:!border-pastel-sky-100 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:!border-pastel-sky-100":
                             color === "sky",

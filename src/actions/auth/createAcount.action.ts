@@ -9,6 +9,7 @@ interface ActionState {
     status?: number
     values: {
         name: string
+        lastName: string
         email: string
         password: string,
         confirmPassword: string
@@ -21,6 +22,7 @@ export const createAccountAction = async (
 ): Promise<ActionState> => {
     const registerData = {
         name: (formData.get("name") as string) || "",
+        lastName: (formData.get("lastName") as string) || "",
         email: (formData.get("email") as string) || "",
         password: (formData.get("password") as string) || "",
         confirmPassword: (formData.get("confirmPassword") as string) || "",
@@ -51,6 +53,7 @@ export const createAccountAction = async (
         },
         body: JSON.stringify({
             name: register.data.name,
+            lastName: register.data.lastName,
             email: register.data.email,
             password: register.data.password,
         }),
@@ -64,6 +67,7 @@ export const createAccountAction = async (
         status: req.status,
         values: {
             name: "",
+            lastName:"",
             email: "",
             password: "",
             confirmPassword: "",

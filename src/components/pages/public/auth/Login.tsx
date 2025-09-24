@@ -4,9 +4,11 @@ import Link from "next/link"
 
 const Login = () => {
     return (
-        <div className="relative z-50 flex w-auto md:w-96 pt-10 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-xl">
+        <div className="relative z-50 flex w-auto md:w-96 pt-10 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
 
-            <HeaderCard title={'Sign In'} />
+            <HeaderCard 
+            title={'Sign In'} 
+            color={'yellow'}/>
 
             <LoginForm />
 
