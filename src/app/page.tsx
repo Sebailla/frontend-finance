@@ -8,13 +8,6 @@ export default function Home() {
       <header className="header  "></header>
       <main className="flex flex-col items-center justify-center min-h-screen">
 
-        <Image
-          src={'/logo.svg'}
-          width={200}
-          height={200}
-          alt="logo"
-        />
-
         <TestComponent />
 
       </main>

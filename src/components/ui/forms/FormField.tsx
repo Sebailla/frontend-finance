@@ -1,5 +1,6 @@
 
 import clsx from "clsx";
+import { RefObject } from "react";
 
 interface FormFieldProps {
     label?: string;
@@ -10,6 +11,7 @@ interface FormFieldProps {
     defaultValue?: string;
     id?: string
     color?: "yellow" | "rose" | "sky" | "lira" | "green" | "red";
+    inputRef?: RefObject<HTMLInputElement | null>
 }
 
 export const FormField = ({
@@ -21,6 +23,7 @@ export const FormField = ({
     defaultValue,
     id,
     color = "yellow",
+    inputRef,
 }: FormFieldProps) => {
     return (
         <div className="relative h-11 w-full min-w-[200px] my-1 rounded-xl">
@@ -42,6 +45,7 @@ export const FormField = ({
                 type={type}
                 defaultValue={defaultValue}
                 id={id}
+                ref={inputRef}
             />
             <label
                 className={clsx(

@@ -7,6 +7,7 @@ export * from './pages/public/auth/Register';
 export * from './pages/public/auth/forms/LoginForm';
 export * from './pages/public/auth/forms/RegisterForm';
 export * from './test/TestComponent';
+export * from './test/ThemeButtons';
 export * from './ui/Notifications/ErrorMsg';
 export * from './ui/Notifications/Notifications';
 export * from './ui/Notifications/SuccessMsg';

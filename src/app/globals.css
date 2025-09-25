@@ -54,8 +54,10 @@
   --color-green-apple-700: #629014;
 
   --color-pastel-lira-100: #E8C4F3;
+  --color-pastel-lira-200: #D797EA;
   --color-pastel-lira-300: #CA78E3; /* Color referente violet */
   --color-pastel-lira-400: #BB51DB;
+  --color-pastel-lira-500: #AC2BD4;
   --color-pastel-lira-700: #6E1C87;
 
   /* Pastel Yellow Scale */
@@ -83,6 +85,23 @@
   --color-pastel-violet-800: #3c0b6a;
   --color-pastel-violet-900: #250741;
   --color-pastel-violet-950: #0d0217;
+
+  --color-pastel-sky-50: #E7FBFD;
+  --color-pastel-sky-100: #BCF3FA;
+  --color-pastel-sky-200: #91EBF7;
+  --color-pastel-sky-300: #7AE7F6; /* color referente sky*/
+  --color-pastel-sky-400: #3BDCF1;
+  --color-pastel-sky-500: #11D5EE;
+  --color-pastel-sky-600: #0EAEC4;
+  --color-pastel-sky-700: #0B8899;
+
+  --color-pastel-red-50: #FEEBE7;
+  --color-pastel-red-100: #FCC6BB;
+  --color-pastel-red-200: #FAA18F;
+  --color-pastel-red-300: #F87C63;
+  --color-pastel-red-400: #F65737;
+  --color-pastel-red-500: #F4320B;
+  --color-pastel-red-600: #C82909;
 
   /* -  Pastel rose 200 - */
   --color-pastel-rose-50: #fde8f2;

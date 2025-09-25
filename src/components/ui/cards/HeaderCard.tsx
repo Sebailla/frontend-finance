@@ -13,10 +13,10 @@ export const HeaderCard = ({ title, className, disabled, color }: HeaderCardProp
             {
                 "bg-gradient-to-tr from-pastel-yellow-400 to-pastel-yellow-100 shadow-pastel-yellow-500/40": color === 'yellow',
                 "bg-gradient-to-tr from-pastel-rose-400 to-pastel-rose-100 shadow-pastel-rose-500/40": color === "rose",
-                "bg-pastel-lira-200 text-gray-900": color === "lira",
+                "bg-gradient-to-tr from-pastel-lira-400 to-pastel-lira-100 shadow-pastel-lira-500/40": color === "lira",
                 "bg-gradient-to-tr from-green-apple-400 to-green-apple-100 shadow-green-apple-400/40": color === "green",
-                "bg-pastel-sky-300 text-gray-900": color === "sky",
-                "bg-pastel-red-300 text-gray-900": color === "red",
+                "bg-gradient-to-tr from-pastel-sky-400 to-pastel-sky-100 shadow-pastel-sky-500/40": color === "sky",
+                "bg-gradient-to-tr from-pastel-red-400 to-pastel-red-100 shadow-pastel-red-500/40": color === "red",
             }, "hover:text-gray-700",
             className
         )} >

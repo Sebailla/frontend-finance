@@ -59,7 +59,7 @@ export const RegisterForm = () => {
             />
 
             <FormField
-                label={'Lastname'}
+                label={'Last Name'}
                 type="text"
                 name="lastName"
                 id="lastName"
