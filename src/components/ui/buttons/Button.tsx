@@ -23,11 +23,11 @@ const Button = ({
                 "btn",
                 {
                     "bg-pastel-yellow-300 text-gray-900 ring-pastel-yellow-300": color === "yellow",
-                    "bg-pastel-rose-200 text-gray-900": color === "rose",
-                    "bg-pastel-lira-200 text-gray-900": color === "lira",
+                    "bg-pastel-rose-200 text-gray-900 ring-pastel-rose-200": color === "rose",
+                    "bg-pastel-lira-200 text-gray-900 ring-pastel-lira-200": color === "lira",
                     "bg-green-apple-300 text-gray-900 ring-green-apple-300": color === "green",
-                    "bg-pastel-sky-300 text-gray-900": color === "sky",
-                    "bg-pastel-red-300 text-gray-900": color === "red",
+                    "bg-pastel-sky-300 text-gray-900 ring-pastel-sky-300": color === "sky",
+                    "bg-pastel-red-300 text-gray-900 ring-pastel-red-300": color === "red",
                 }, "hover:text-gray-700",
                 className
             )}
