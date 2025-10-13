@@ -8,19 +8,41 @@ export default function RootLayout({ children }: Readonly<{
 }>) {
     return (
         <>
-            <div className="lg:grid lg:grid-cols-2 min-h-screen absolute top-0 left-0 leading-5 h-full w-full overflow-hidden bg-[url('/img/Imagen1.png')] bg-cover bg-center bg-no-repeat">
+            <div className="relative min-h-screen w-full overflow-hidden">
+                {/* 1) Imagen de fondo (z-0) */}
+                <div
+                    className="absolute inset-0 z-0"
+                    style={{
+                        backgroundImage: "url('/img/Imagen1.png')",
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        backgroundRepeat: "no-repeat",
+                    }}
+                />
 
-                {/* Left side of the auth layout */}
-                <section className="flex flex-col  items-center ">
-                    
-                </section>
+                {/* 2) Overlay derecho con blur (z-10) */}
+                <div
+                    aria-hidden
+                    className="absolute inset-y-0 right-0 w-1/2 z-10 pointer-events-none"
+                    style={{
+                        /* bg semitransparente: ajustar alpha (0.25 = 25%) */
+                        background: "rgba(255,255,255,0.7)",
+                        /* respaldo explícito para navegadores (incluye Safari) */
+                        backdropFilter: "blur(10px)",
+                        WebkitBackdropFilter: "blur(10px)",
+                    }}
+                />
 
-                {/* Right side of the auth layout */}
-                <section className="lg:pt-30 items-center justify-items-center relative flex flex-col lg:gap-0 gap-10  py-10 px-5 lg:px-0 h-full bg-[#f9f9f9] bg-opacity-10">
-                    <div className="max-w-3xl mx-auto">
-                        {children}
-                    </div>
-                </section>
+                {/* 3) Contenido encima (z-20) */}
+                <div className="relative z-20 grid lg:grid-cols-2 min-h-screen">
+                    {/* Mitad izquierda: ocupada por la imagen (no necesitamos contenido aquí) */}
+                    <section className="hidden lg:block" />
+
+                    {/* Mitad derecha: fondo sólido para children */}
+                    <section className="flex flex-col items-center justify-center py-10 px-5 lg:px-0">
+                        <div className="max-w-3xl mx-auto">{children}</div>
+                    </section>
+                </div>
             </div>
             <Notifications/>
         </>
