@@ -7,7 +7,7 @@ import ThemeButtons, { ButtonColor } from "./ThemeButtons"
 import { useEffect, useRef, useState } from "react"
 
 const TestComponent = () => {
-    const [theme, setTheme] = useState<ButtonColor>("green") // 👈 estado global del componente
+    const [theme, setTheme] = useState<ButtonColor>("rose") // 👈 estado global del componente
     const passRef = useRef<HTMLInputElement>(null)
 
     useEffect(() => {

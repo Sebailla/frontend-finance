@@ -8,7 +8,7 @@ export default function RootLayout({ children }: Readonly<{
 }>) {
     return (
         <>
-            <div className="lg:grid lg:grid-cols-2 min-h-screen absolute top-0 left-0 leading-5 h-full w-full overflow-hidden">
+            <div className="lg:grid lg:grid-cols-2 min-h-screen absolute top-0 left-0 leading-5 h-full w-full overflow-hidden bg-[url('/img/Imagen1.png')] bg-cover bg-center bg-no-repeat">
 
                 {/* Left side of the auth layout */}
                 <section className="flex flex-col  items-center ">
@@ -16,7 +16,7 @@ export default function RootLayout({ children }: Readonly<{
                 </section>
 
                 {/* Right side of the auth layout */}
-                <section className="lg:pt-30 items-center justify-items-center relative flex flex-col lg:gap-0 gap-10  py-10 px-5 lg:px-0 h-full">
+                <section className="lg:pt-30 items-center justify-items-center relative flex flex-col lg:gap-0 gap-10  py-10 px-5 lg:px-0 h-full bg-[#f9f9f9] bg-opacity-10">
                     <div className="max-w-3xl mx-auto">
                         {children}
                     </div>
@@ -26,3 +26,4 @@ export default function RootLayout({ children }: Readonly<{
         </>
     );
 }
+

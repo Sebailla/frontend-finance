@@ -4,7 +4,7 @@ import Link from "next/link"
 
 const Register = () => {
     return (
-        <div className="relative z-50 flex w-auto md:w-96 mt-10 md:mt-20 lg:mt-0 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-xl">
+        <div className="relative flex w-auto md:w-96 mt-10 md:mt-20 lg:mt-0 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-xl">
 
             <HeaderCard 
             title={'Sign Up'}
