@@ -1,5 +1,6 @@
+import Register from '@/components/auth/Register'
 import type { Metadata } from 'next'
-import Register from '@/components/pages/public/auth/Register'
+
 
 export const metadata: Metadata = {
     title: 'Personal Finance - Sing Up',

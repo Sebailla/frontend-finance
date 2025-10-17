@@ -2,7 +2,7 @@
 
 import Button from "../ui/buttons/Button"
 import { HeaderCard } from "../ui/cards/HeaderCard"
-import { FormField } from "../ui/forms/FormField"
+import { FormField } from "../forms/FormField"
 import ThemeButtons, { ButtonColor } from "./ThemeButtons"
 import { useEffect, useRef, useState } from "react"
 

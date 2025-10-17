@@ -4,8 +4,8 @@ import { confirmAccountAction } from "@/actions"
 import { useRouter } from "next/navigation"
 import { useActionState, useEffect, useState } from "react"
 import toast from "react-hot-toast"
-import SpinIcon from "../icons/spinIcon"
 import { PinInput, PinInputField } from "@chakra-ui/pin-input"
+import SpinIcon from "../../../public/assets/icons/spinIcon"
 
 export const BoxsConfirm = () => {
 

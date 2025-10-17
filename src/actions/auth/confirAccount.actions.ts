@@ -1,6 +1,6 @@
 'use server'
 
-import { TokenSchema } from "@/domain/schemas"
+import { TokenSchema } from "@/lib/schemas"
 
 interface ActionState {
     errors: string[]

@@ -4,7 +4,7 @@ import { createAccountAction } from "@/actions"
 import { useActionState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import toast from "react-hot-toast"
-import { FormField } from "@/components/ui/forms/FormField"
+import { FormField } from "@/components/forms/FormField"
 import Button from "@/components/ui/buttons/Button"
 
 

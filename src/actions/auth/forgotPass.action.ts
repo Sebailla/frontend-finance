@@ -1,6 +1,7 @@
 'use server'
 
-import { ForgotPasswordSchema } from "@/domain/schemas"
+import { ForgotPasswordSchema } from "@/lib/schemas"
+
 
 
 interface ActionState {

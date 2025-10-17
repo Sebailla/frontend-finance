@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { sfProDisplay, sfProText } from "@/components/fonts/fonts";
+import { sfProDisplay, sfProText } from "../../public/assets/fonts/fonts";
+
 
 
 export const metadata: Metadata = {

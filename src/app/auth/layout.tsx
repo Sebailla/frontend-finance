@@ -13,7 +13,7 @@ export default function RootLayout({ children }: Readonly<{
                 <div
                     className="absolute inset-0 z-0"
                     style={{
-                        backgroundImage: "url('/img/Imagen7.jpg')",
+                        backgroundImage: "url('/assets/images/Imagen7.jpg')",
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",

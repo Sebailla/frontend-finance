@@ -1,7 +1,6 @@
 'use server'
 
-import { RegisterSchema } from "@/domain/schemas"
-
+import { RegisterSchema } from "@/lib/schemas"
 
 interface ActionState {
     errors: string[]

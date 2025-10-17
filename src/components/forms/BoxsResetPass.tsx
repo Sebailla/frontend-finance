@@ -6,7 +6,8 @@ import { PinInput, PinInputField } from "@chakra-ui/pin-input"
 
 import { Dispatch, SetStateAction, useActionState, useEffect, useState } from "react"
 import toast from "react-hot-toast"
-import SpinIcon from "../icons/spinIcon"
+import SpinIcon from "../../../public/assets/icons/spinIcon"
+
 
 
 

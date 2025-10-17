@@ -3,8 +3,8 @@
 import { LoginUserAction } from "@/actions"
 import Button from "@/components/ui/buttons/Button"
 import { GoogleSignBTN } from "@/components/ui/buttons/Google-sign-btn"
-import { CheckBox } from "@/components/ui/forms/CheckBox"
-import { FormField } from "@/components/ui/forms/FormField"
+import { CheckBox } from "@/components/forms/CheckBox"
+import { FormField } from "@/components/forms/FormField"
 import { useActionState, useEffect } from "react"
 import toast from "react-hot-toast"
 

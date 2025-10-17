@@ -2,8 +2,7 @@
 import { useState } from "react";
 
 import Image from "next/image";
-import SpinIcon from "../icons/spinIcon";
-
+import SpinIcon from "../../../../public/assets/icons/spinIcon";
 
 
 export const GoogleSignBTN = () => {
