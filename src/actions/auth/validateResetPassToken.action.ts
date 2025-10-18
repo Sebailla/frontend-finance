@@ -2,8 +2,6 @@
 
 import { TokenSchema } from "@/lib/schemas"
 
-
-
 interface ActionState{
     errors: string[]
     success: string
@@ -33,6 +31,8 @@ export const validateResetPassToken = async (token:string, prevState: ActionStat
         })
     
         const json = await req.json()
+
+        console.log(json)
     
         if (!req.ok) {
             return {

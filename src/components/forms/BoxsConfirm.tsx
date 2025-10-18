@@ -54,19 +54,21 @@ export const BoxsConfirm = () => {
     return (
         <div className=" flex flex-col justify-center gap-4">
             <section className="flex justify-center gap-3 my-10">
-                <PinInput
-                    value={token}
-                    onChange={handleChange}
-                    onComplete={handleComplete}
 
-                >
-                    <PinInputField className="w-10 h-12 rounded-lg border border-slate-400 text-center placeholder-white shadow-md" />
-                    <PinInputField className="w-10 h-12 rounded-lg border border-slate-400 text-center placeholder-white shadow-md" />
-                    <PinInputField className="w-10 h-12 rounded-lg border border-slate-400 text-center placeholder-white shadow-md" />
-                    <PinInputField className="w-10 h-12 rounded-lg border border-slate-400 text-center placeholder-white shadow-md" />
-                    <PinInputField className="w-10 h-12 rounded-lg border border-slate-400 text-center placeholder-white shadow-md" />
-                    <PinInputField className="w-10 h-12 rounded-lg border border-slate-400 text-center placeholder-white shadow-md" />
-                </PinInput>
+                    <PinInput
+                        value={token}
+                        onChange={handleChange}
+                        onComplete={handleComplete}
+                        otp
+                    // si querés longitud distinta, podés controlar la cantidad de <PinInputField />
+                    >
+                        {Array.from({ length: 6 }).map((_, i) => (
+                            <PinInputField
+                                key={i}
+                                className="w-10 h-12 rounded-lg border border-slate-400 text-center placeholder-white shadow-md"
+                            />
+                        ))}
+                    </PinInput>
 
             </section>
             <section >

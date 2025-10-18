@@ -5,6 +5,7 @@ import { RegisterSchema } from "@/lib/schemas"
 interface ActionState {
     errors: string[]
     success: string
+    error: string
     status?: number
     values: {
         name: string
@@ -36,6 +37,7 @@ export const createAccountAction = async (
         return {
             errors,
             success: '',
+            error: '',
             values: registerData, // devolvemos los valores que el user ya escribió
         }
     }
@@ -60,9 +62,13 @@ export const createAccountAction = async (
 
     const json = await req.json()
 
+
+    console.log(json)
+
     return {
         errors: [],
         success: json.message || 'Account created successfully',
+        error: json.message,
         status: req.status,
         values: {
             name: "",

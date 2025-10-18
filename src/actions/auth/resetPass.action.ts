@@ -41,7 +41,7 @@ export const resetPassword = async (token: string, prevState: ActionState, formD
     })
 
     const json = await req.json()
-    console.log(json.ok)
+    console.log(json)
 
     if(!req.ok){
         const {error} = ErrorResponseSchema.parse(json)

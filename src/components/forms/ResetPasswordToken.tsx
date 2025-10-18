@@ -1,25 +1,19 @@
 'use client'
+import { validateResetPassToken } from '@/actions'
+import { PinInput, PinInputField } from '@chakra-ui/pin-input'
+import { Dispatch, SetStateAction, useActionState, useEffect, useState, useTransition } from 'react'
+import toast from 'react-hot-toast'
+import SpinIcon from '../ui/icons/spinIcon'
+import Notifications from '../ui/Notifications/Notifications'
 
-
-import { validateResetPassToken } from "@/actions"
-import { PinInput, PinInputField } from "@chakra-ui/pin-input"
-
-import { Dispatch, SetStateAction, useActionState, useEffect, useState } from "react"
-import toast from "react-hot-toast"
-import SpinIcon from "../../../public/assets/icons/spinIcon"
-
-
-
-
-type BoxsResetPassProps = {
+type ResetPasswordTokenProps = {
     setIsValidToken: Dispatch<SetStateAction<boolean>>
     token: string
     setToken: Dispatch<SetStateAction<string>>
 }
 
-export const BoxsResetPass = ({setIsValidToken, token, setToken}:BoxsResetPassProps) => {
+export const ResetPasswordToken = ({ setIsValidToken, token, setToken }: ResetPasswordTokenProps) => {
 
-    
     const [isComplete, setIsComplete] = useState(false)
 
     const validateResetPassTokenInput = validateResetPassToken.bind(null, token)
@@ -44,12 +38,10 @@ export const BoxsResetPass = ({setIsValidToken, token, setToken}:BoxsResetPassPr
         }
 
         if (state.success) {
-            toast.success(state.success, {
-                onClose: () => {
-                    setIsValidToken(true)
-                },
-            })
+            toast.success(state.success)
+            setIsValidToken(true)
         }
+        
 
     }, [state, setIsValidToken])
 
@@ -62,21 +54,29 @@ export const BoxsResetPass = ({setIsValidToken, token, setToken}:BoxsResetPassPr
         setIsComplete(true)
     }
 
+
+
     return (
-        <div className=" flex flex-col justify-center gap-4">
+        <form className="flex flex-col gap-4 p-6">
+
+            <p className="p-6 text-center font-body text-md leading-normal text-inherit antialiased">
+                Please enter the 6-digit code you received in your email box provided.
+            </p>
+
             <section className="flex justify-center gap-3 my-10">
                 <PinInput
                     value={token}
                     onChange={handleChange}
                     onComplete={handleComplete}
-
+                    
+                // si querés longitud distinta, podés controlar la cantidad de <PinInputField />
                 >
-                    <PinInputField className="w-10 h-12 rounded-lg border border-slate-400 text-center placeholder-white shadow-md" />
-                    <PinInputField className="w-10 h-12 rounded-lg border border-slate-400 text-center placeholder-white shadow-md" />
-                    <PinInputField className="w-10 h-12 rounded-lg border border-slate-400 text-center placeholder-white shadow-md" />
-                    <PinInputField className="w-10 h-12 rounded-lg border border-slate-400 text-center placeholder-white shadow-md" />
-                    <PinInputField className="w-10 h-12 rounded-lg border border-slate-400 text-center placeholder-white shadow-md" />
-                    <PinInputField className="w-10 h-12 rounded-lg border border-slate-400 text-center placeholder-white shadow-md" />
+                    {Array.from({ length: 6 }).map((_, i) => (
+                        <PinInputField
+                            key={i}
+                            className="w-10 h-12 rounded-lg border border-slate-400 text-center placeholder-white shadow-md"
+                        />
+                    ))}
                 </PinInput>
 
             </section>
@@ -89,6 +89,8 @@ export const BoxsResetPass = ({setIsValidToken, token, setToken}:BoxsResetPassPr
                     </div>
                 }
             </section>
-        </div>
+            <Notifications/>
+
+        </form>
     )
 }

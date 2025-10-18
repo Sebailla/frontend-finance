@@ -11,6 +11,7 @@ import Button from "@/components/ui/buttons/Button"
 const initialState = {
     errors: [],
     success: '',
+    error: '',
     status: undefined,
     values: {
         name: "",
@@ -32,6 +33,9 @@ export const RegisterForm = () => {
             state.errors.forEach(e => {
                 toast.error(e)
             })
+        }
+        if(state.status === 400){
+            toast.error(state.error)
         }
         if (state.status === 409) {
             toast.error(state.success)

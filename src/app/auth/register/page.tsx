@@ -1,4 +1,5 @@
 import Register from '@/components/auth/Register'
+import Notifications from '@/components/ui/Notifications/Notifications'
 import type { Metadata } from 'next'
 
 
@@ -12,7 +13,10 @@ export const metadata: Metadata = {
 
 const RegisterPage = () => {
     return (
-        <Register />
+        <>
+            <Register />
+            <Notifications />
+        </>
     )
 }
 export default RegisterPage

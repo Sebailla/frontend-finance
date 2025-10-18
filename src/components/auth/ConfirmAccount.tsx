@@ -1,9 +1,12 @@
+import React from 'react'
+import { BoxsConfirm } from '../forms/BoxsConfirm'
 
-
-const ConfirmAccount = () => {
+export const ConfirmAccount = () => {
     return (
-        <div>ConfirmAccount</div>
+        <form className="flex flex-col gap-4 p-6">
+
+            <BoxsConfirm/>
+
+        </form>
     )
 }
-
-export default ConfirmAccount
