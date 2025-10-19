@@ -11,15 +11,22 @@ export const GoogleSignBTN = () => {
   const LoginwithGoogle = async () => {
     try {
       setIsLoading(true);
-      //await signIn("google", { callbackUrl: "http://localhost:3000" });
-      setTimeout(() => {
-        setIsLoading(false);
-      }, 2000);
-    } catch {
+
+      // toma la env disponible en el cliente (NEXT_PUBLIC_*)
+      const rawApi = process.env.NEXT_PUBLIC_API_URL ?? "";
+
+      // quitamos slash final si existe
+      const apiBase = rawApi.replace(/\/+$/, "") || "http://localhost:3001/api/v1";
+
+      // endpoint final — ajusta si tu ruta real es diferente
+      const target = `${apiBase}/auth/google/login`;
+
+      // redirige
+      window.location.href = target;
+    } catch (error) {
+      console.error("Error al iniciar auth con Google:", error);
       setIsLoading(false);
-    } /* finally {
-      setIsLoading(false);
-    }  */
+    }
   };
 
   return (
