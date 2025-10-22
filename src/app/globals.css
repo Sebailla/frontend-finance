@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ============================================================================
-   ROOT VARIABLES & THEME CONFIGURATION
+  ROOT VARIABLES & THEME CONFIGURATION
 ============================================================================ */
 
 :root {
@@ -116,7 +116,7 @@
   --color-pastel-rose-900: #410723;
   --color-pastel-rose-950: #17020c;
 
-
+  --color-pastel-orange-300: #ffae62;
   /* 
 #ffae62
 #399ca1
@@ -170,7 +170,7 @@ Pateles:
 }
 
 /* ============================================================================
-   RESPONSIVE BREAKPOINTS
+  RESPONSIVE BREAKPOINTS
 ============================================================================ */
 
 /* iOS Large (Tablet) - 700px to 1024px */
@@ -247,7 +247,7 @@ Pateles:
 }
 
 /* ============================================================================
-   UTILITY CLASSES
+  UTILITY CLASSES
 ============================================================================ */
 
 @layer utilities {
@@ -294,7 +294,7 @@ Pateles:
 }
 
 /* ============================================================================
-   BASE STYLES
+  BASE STYLES
 ============================================================================ */
 
 body {
@@ -308,14 +308,14 @@ strong {
 }
 
 /* ============================================================================
-   COMPONENT STYLES
+  COMPONENT STYLES
 ============================================================================ */
 
 /* Container */
 .container {
   @apply p-[var(--container-padding)] 
-         font-sfProDisplay 
-         w-[var(--container-max-width)];
+        font-sfProDisplay 
+        w-[var(--container-max-width)];
 }
 
 /* Background Adapter */
@@ -326,38 +326,38 @@ strong {
 /* Header */
 .header {
   @apply sticky top-0 z-50
-         bg-background-nav 
-         px-4 md:px-6 
-         [&_*]:no-underline 
-         h-15 
-         w-full;
+        bg-background-nav 
+        px-4 md:px-6 
+        [&_*]:no-underline 
+        h-15 
+        w-full;
 }
 
 
 /* Button Component */
 .btn {
   @apply px-3 md:px-6 py-2 md:py-3 
-         rounded-xl 
-         text-body md:text-headline 
-         text-[#1d1d1f] 
-         font-sfProDisplay 
-         font-semibold 
-         cursor-pointer
-         transform 
-         transition 
-         duration-150 
-         ease-in-out 
-         hover:shadow-[0_6px_8px_var(--shadow-color)]
-         hover:-translate-y-0.5
-         hover:ring-2 
-         ring-offset-2 
-         ring-offset-background
-         active:shadow-[0_2px_4px_var(--shadow-color)]
-         active:translate-y-0.5;
+        rounded-xl 
+        text-body md:text-headline 
+        text-[#1d1d1f] 
+        font-sfProDisplay 
+        font-semibold 
+        cursor-pointer
+        transform 
+        transition 
+        duration-150 
+        ease-in-out 
+        hover:shadow-[0_6px_8px_var(--shadow-color)]
+        hover:-translate-y-0.5
+        hover:ring-2 
+        ring-offset-2 
+        ring-offset-background
+        active:shadow-[0_2px_4px_var(--shadow-color)]
+        active:translate-y-0.5;
 }
 
 /* ============================================================================
-   UTILITY COMPONENTS
+  UTILITY COMPONENTS
 ============================================================================ */
 
 /* Underline Hover Effects */
@@ -370,8 +370,8 @@ strong {
 .u-underline-hover-current::after {
   content: '';
   @apply absolute left-0 -bottom-0.5 h-[2px] w-full 
-         origin-left transform scale-x-0
-         transition-transform duration-100 ease-out;
+        origin-left transform scale-x-0
+        transition-transform duration-100 ease-out;
 }
 
 .u-underline-hover::after {
@@ -398,7 +398,7 @@ strong {
 }
 
 /* ============================================================================
-   ANIMATIONS & KEYFRAMES
+  ANIMATIONS & KEYFRAMES
 ============================================================================ */
 
 /* Toast Animations */
